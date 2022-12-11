@@ -2,25 +2,31 @@
     $title = "Contact us";
     $headline = "Свяжитесь с нами";
     require_once "./header.php";
+    
+    session_start();
+   
 ?>
 
 
 <div class="container mt-2">
     <form enctype="multipart/form-data" action="check_post.php" method="post">
 
-        <div class="mb-2">
+        <div >
+           
             <label for="inputName">Введите имя</label>
-            <input required type="text" class="form-control" id="inputName" name="username"  placeholder="имя" >
+            <input  required type="text" class="form-control" id="inputName" name="username"  placeholder="имя" >
+                <div class="text-danger"><?=$_SESSION['error_username']?></div>
         </div>
 
         <div class="mb-2">
             <label for="inputEmail">Введите email</label>
-            <input required type="email" class="form-control" id="inputEmail"  name="email"  placeholder="почта@gmail.com">
+            <input required type="email" class="form-control" id="inputEmail"  name="email"  placeholder="почта@gmail.com"  >
         </div>
 
         <div class="mb-2">
             <label for="inputPassword">Введите пароль</label>
-            <input required type="password" class="form-control" id="inputPassword" name="password" placeholder="пароль" >
+            <input required type="password" class="form-control" id="inputPassword" name="password" placeholder="пароль"  >
+                <div class="text-danger"><?=$_SESSION['error_password']?></div>
         </div>
 
         <div class="mb-2">
@@ -30,10 +36,11 @@
         </div>
 
         <div class="mb-2">
-            <textarea name="message" placeholder="Напишите о себе" class="form-control"></textarea><br/>
+            <textarea name="message" placeholder="Напишите о себе" class="form-control"> </textarea><br/>
+                <div class="text-danger"><?=$_SESSION['error_aboutMe']?></div>
         </div>
         
-        <label class="form-check-label">Ваш пол</label>         <label class="form-check-label space120 ">Выберите языки, которые вы знаете</label><br>
+        <label class="form-check-label">Ваш пол</label>         <label class="form-check-label space120 ">Выберите языки, которые вы учите</label><br>
         
         <div class="form-check form-check-inline" >
             <input class="form-check-input" type="radio" name="sex"  value="option1">
@@ -74,10 +81,11 @@
             </select>
         </div>
        <div class="d-flex justify-content-end">
-            <input type="reset" class="btn btn-primary me-md-2" name="reset" placeholder="введите пароль" class="form-control">
+            <input type="reset" class="btn btn-primary me-md-2" name="reset"  class="form-control" >
             <input type="submit" value="Отправить" class="btn btn-success ml-2 ">
         </div>
     </form>
+   
 </div>
 
 

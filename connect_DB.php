@@ -9,6 +9,6 @@ $conn = mysqli_connect($servername, $adminName, $adminPass, $database);
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
-printf( "Connected successfully");
+//printf( "Connected successfully");
 
 ?>

@@ -6,7 +6,7 @@
 //$sql = "INSERT INTO users (username) VALUES ('$username')";
 //echo "    " . $password;
 if ($conn->query($sql) === TRUE) {
-   echo "Успешно создана новая запись";
+   //echo "Успешно создана новая запись";
 } else {
    echo "Ошибка: " . $sql . "<br>" . $conn->error;
 }

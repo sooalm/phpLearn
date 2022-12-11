@@ -12,7 +12,7 @@
   </head>
   <body>
     <header>
-     <a href="https://simtech.ru">Главная</a> | <a href=#>Свяжитесь с нами</a> 
+     <a href="https://simtech.ru">Страница компании</a> | <a href=index.php>Свяжитесь с нами</a>  | <a href=profile.php>Мои данные</a> 
     <h1 class="text-center"> <?php echo $headline ?></h1>
 </header>
 

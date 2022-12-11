@@ -1,0 +1,26 @@
+SET NAMES utf8;
+SET time_zone = '+00:00';
+SET foreign_key_checks = 0;
+SET sql_mode = 'NO_AUTO_VALUE_ON_ZERO';
+
+SET NAMES utf8mb4;
+
+CREATE DATABASE `usersTable` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
+USE `usersTable`;
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `password` binary(50) NOT NULL,
+  `sex` char(1) NOT NULL,
+  `languages` varchar(50) NOT NULL,
+  `identity` varchar(50) NOT NULL,
+  `aboutMe` varchar(200) NOT NULL,
+  `fileName` varchar(30) NOT NULL,
+  `dateReg` date NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
+
+INSERT INTO `users` (`id`, `username`, `email`, `password`, `sex`, `languages`, `identity`, `aboutMe`, `fileName`, `dateReg`) VALUES
+(1,	'Евгений',	'sshabrovivivi@gmail.com',	UNHEX('6531306164633339343962613539616262653536653035376632306638383365000000000000000000000000000000000000'),	'м',	'Изучает 2 языка: PHP JS ',	'Человек',	'Текст текст текст',	'literally_me.jpg',	'2011-12-22');
