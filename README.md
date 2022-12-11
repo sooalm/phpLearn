@@ -6,6 +6,10 @@
 Далее выберем ее в левой панели и нажмем кнопку импорт и выберем файл usersTable.sql
 
  ![image](https://user-images.githubusercontent.com/56484358/206900395-209c1f9b-dd11-4bc7-a0f8-91117cde5213.png)
+ 
+ Также нужно указать данные для подключения к БД
+ 
+ ![image](https://user-images.githubusercontent.com/56484358/206900545-3a163dd2-2923-4db8-b0e3-5bd10cea17d4.png)
 
 Открываем наш проект 
 
