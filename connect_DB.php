@@ -1,8 +1,8 @@
 <?php 
 $servername = "localhost";
 $database = "usersTable";
-$adminName = "smallAdmin";
-$adminPass = "123";
+$adminName = "root";
+$adminPass = "";
 // Создаем соединение
 $conn = mysqli_connect($servername, $adminName, $adminPass, $database);
 // Проверяем соединение
